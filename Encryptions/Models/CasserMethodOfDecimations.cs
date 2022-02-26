@@ -7,16 +7,6 @@ namespace TheoryOfInformation.lab1.Encryptions.Models
 {
     internal class CasserMethodOfDecimations : IEncryption
     {
-        /*ToDo:
-         * 1. Change language in cipher
-         * 2. Group enums in Structs
-         * 3. Refactor ctrs of this class
-         * 4. Check Ui for requirements
-         *
-         *
-         *
-         *
-         */
         public bool HasKey => false;
 
         public LangIds Lang => LangIds.RU;

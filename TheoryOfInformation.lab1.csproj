@@ -61,7 +61,7 @@
     <Compile Include="Encryptions\Models\Ciphers\Alphabet.cs" />
     <Compile Include="Encryptions\Models\Ciphers\AlphabetInUse.cs" />
     <Compile Include="Encryptions\Models\Ciphers\CaesarMethodOfDecimations.cs" />
-    <Compile Include="Encryptions\Models\Ciphers\CipherFactory.cs" />
+    <Compile Include="Encryptions\Models\Factories\CipherFactory.cs" />
     <Compile Include="ENUMS\CiphersName.cs" />
     <Compile Include="Encryptions\Models\Ciphers\EnglishAlphabet.cs" />
     <Compile Include="Interfacies\ICipher.cs" />
