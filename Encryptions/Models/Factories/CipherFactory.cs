@@ -6,29 +6,17 @@ namespace TheoryOfInformation.lab1.Encryptions.Models.Ciphers
 {
     public class CipherFactory
     {
-        public static ICipher ProduceCipher(CiphersName cipherName, LangIds langIds = LangIds.EN)
+        public static ICipher ProduceCipher(CiphersName cipherName, LangIds langId = LangIds.EN)
         {
 
-            AlphabetInUse lang;
-            switch (langIds)
-            {
-                case LangIds.EN:
-                    lang = AlphabetInUse.English;
-                    break;
-                case LangIds.RU:
-                    lang = AlphabetInUse.Russian;
-                    break;
-                default:
-                    throw new ArgumentException("There are no such language", nameof(langIds));
-            }
             switch (cipherName)
             {
                 case CiphersName.CaesarMethodOfDecimations:
-                    return new CaesarMethodOfDecimations(lang);
+                    return new CaesarMethodOfDecimations(langId);
                 case CiphersName.TextByColumnsCipher:
-                    return new TextByColumns(lang);
+                    return new TextByColumns(langId);
                 case CiphersName.WizhnersAlgorithm:
-                    return new WizhnersAlgorithm(lang);
+                    return new WizhnersAlgorithm(langId);
                 default:
                     return new UnknownCipher();
                            

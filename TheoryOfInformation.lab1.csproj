@@ -59,7 +59,6 @@
     <Compile Include="Encryptions\Models\Casser.cs" />
     <Compile Include="Encryptions\Models\CasserMethodOfDecimations.cs" />
     <Compile Include="Encryptions\Models\Ciphers\Alphabet.cs" />
-    <Compile Include="Encryptions\Models\Ciphers\AlphabetInUse.cs" />
     <Compile Include="Encryptions\Models\Ciphers\CaesarMethodOfDecimations.cs" />
     <Compile Include="Encryptions\Models\Factories\CipherFactory.cs" />
     <Compile Include="ENUMS\CiphersName.cs" />

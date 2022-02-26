@@ -1,13 +1,14 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TheoryOfInformation.lab1.Encryptions.Models.Ciphers;
+using TheoryOfInformation.lab1.ENUMS;
 
 namespace TheoryOfInformation.lab1.Tests
 {
     [TestClass]
     public class CaesarMethodOfDecimationsTests
     {
-        private AlphabetInUse _lang = AlphabetInUse.English;
+        private LangIds _lang = LangIds.EN;
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void NotCoPrimeKeyEncrypt()

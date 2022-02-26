@@ -1,4 +1,5 @@
-﻿using TheoryOfInformation.lab1.Interfacies;
+﻿using TheoryOfInformation.lab1.ENUMS;
+using TheoryOfInformation.lab1.Interfacies;
 
 namespace TheoryOfInformation.lab1.Encryptions.Models.Ciphers
 {
@@ -10,14 +11,14 @@ namespace TheoryOfInformation.lab1.Encryptions.Models.Ciphers
             _alphabet = new EnglishAlphabet();
         }
 
-        public WizhnersAlgorithm(AlphabetInUse language)
+        public WizhnersAlgorithm(LangIds language)
         {
             switch (language)
             {
-                case AlphabetInUse.English:
+                case LangIds.EN:
                     _alphabet = new EnglishAlphabet();
                     break;
-                case AlphabetInUse.Russian:
+                case LangIds.RU:
                     _alphabet = new RussianAlphabet();
                     break;
                 
