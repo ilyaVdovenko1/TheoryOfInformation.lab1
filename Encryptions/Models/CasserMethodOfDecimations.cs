@@ -9,7 +9,7 @@ namespace TheoryOfInformation.lab1.Encryptions.Models
     {
         public bool HasKey => false;
 
-        public LangIds Lang => LangIds.RU;
+        public LangIds Lang => LangIds.EN;
 
         private readonly ICipher Cipher;
 
