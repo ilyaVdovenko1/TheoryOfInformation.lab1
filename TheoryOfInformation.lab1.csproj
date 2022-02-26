@@ -62,20 +62,20 @@
     <Compile Include="Encryptions\Models\Ciphers\AlphabetInUse.cs" />
     <Compile Include="Encryptions\Models\Ciphers\CaesarMethodOfDecimations.cs" />
     <Compile Include="Encryptions\Models\Ciphers\CipherFactory.cs" />
-    <Compile Include="Encryptions\Models\Ciphers\Ciphers.cs" />
+    <Compile Include="ENUMS\CiphersName.cs" />
     <Compile Include="Encryptions\Models\Ciphers\EnglishAlphabet.cs" />
-    <Compile Include="Encryptions\Models\Ciphers\ICipher.cs" />
-    <Compile Include="Encryptions\Models\Ciphers\Register.cs" />
+    <Compile Include="Interfacies\ICipher.cs" />
+    <Compile Include="ENUMS\Register.cs" />
     <Compile Include="Encryptions\Models\Ciphers\RussianAlphabet.cs" />
     <Compile Include="Encryptions\Models\Ciphers\TextByColumns.cs" />
     <Compile Include="Encryptions\Models\Ciphers\UnknownCipher.cs" />
     <Compile Include="Encryptions\Models\Ciphers\WizhnersAlgorithm.cs" />
-    <Compile Include="Encryptions\Models\IEncryption.cs" />
+    <Compile Include="Interfacies\IEncryption.cs" />
     <Compile Include="Encryptions\TextCleaner.cs" />
     <Compile Include="FileUnit.xaml.cs">
       <DependentUpon>FileUnit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Structs\LangIds.cs" />
+    <Compile Include="ENUMS\LangIds.cs" />
     <Compile Include="Structs\RemovedSymbl.cs" />
     <Compile Include="TextUnit.xaml.cs">
       <DependentUpon>TextUnit.xaml</DependentUpon>

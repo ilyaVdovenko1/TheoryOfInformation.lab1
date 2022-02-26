@@ -1,6 +1,6 @@
-﻿using TheoryOfInformation.lab1.Structs;
+﻿using TheoryOfInformation.lab1.ENUMS;
 
-namespace TheoryOfInformation.lab1.Encryptions.Models
+namespace TheoryOfInformation.lab1.Interfacies
 {
     internal interface IEncryption
     {

@@ -1,4 +1,5 @@
 ﻿using System;
+using TheoryOfInformation.lab1.ENUMS;
 
 namespace TheoryOfInformation.lab1.Encryptions.Models.Ciphers
 {

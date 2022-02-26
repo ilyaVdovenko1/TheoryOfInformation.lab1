@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TheoryOfInformation.lab1.Encryptions.Models.Ciphers;
 
-namespace TestsLab1
+namespace TheoryOfInformation.lab1.Tests
 {
     [TestClass]
     public class CaesarMethodOfDecimationsTestsRu
@@ -18,7 +18,7 @@ namespace TestsLab1
             //act
             encrypter.Encrypt("3", testText);
         }
-        
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void NotCoPrimeKeyDecrypt()
@@ -29,7 +29,7 @@ namespace TestsLab1
             //act
             encrypter.Decrypt("3", testText);
         }
-        
+
         [TestMethod]
         public void AlphabetEncrypt()
         {
@@ -37,14 +37,14 @@ namespace TestsLab1
             var encrypter = new CaesarMethodOfDecimations(_lang);
             var testText = "А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я";
             var expected = "А Е Й О У Ш Э В Ж Л Р Х Ъ Я Д И Н Т Ч Ь Б Ё К П Ф Щ Ю Г З М С Ц Ы";
-            
+
             //act
-            var actual =encrypter.Encrypt("5", testText);
+            var actual = encrypter.Encrypt("5", testText);
             //assert
             Assert.AreEqual(expected, actual);
         }
-        
-        
+
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void KeyLessThenZeroEncrypt()
@@ -55,7 +55,7 @@ namespace TestsLab1
             //act
             encrypter.Encrypt("-12", testText);
         }
-        
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void KeyLessThenZeroDecrypt()
@@ -66,7 +66,7 @@ namespace TestsLab1
             //act
             encrypter.Decrypt("-12", testText);
         }
-        
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void KeyIsNullEncrypt()
@@ -77,7 +77,7 @@ namespace TestsLab1
             //act
             encrypter.Encrypt(null, testText);
         }
-        
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void KeyIsNullDecrypt()
@@ -88,7 +88,7 @@ namespace TestsLab1
             //act
             encrypter.Decrypt(null, testText);
         }
-        
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void KeyIsEmptyEncrypt()
@@ -99,7 +99,7 @@ namespace TestsLab1
             //act
             encrypter.Encrypt(string.Empty, testText);
         }
-        
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void KeyIsEmptyDecrypt()
@@ -110,7 +110,7 @@ namespace TestsLab1
             //act
             encrypter.Decrypt(string.Empty, testText);
         }
-        
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void TextIsEmptyEncrypt()
@@ -121,7 +121,7 @@ namespace TestsLab1
             //act
             encrypter.Encrypt(string.Empty, testText);
         }
-        
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void TextIsEmptyDecrypt()
@@ -132,7 +132,7 @@ namespace TestsLab1
             //act
             encrypter.Decrypt(string.Empty, testText);
         }
-        
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void TextIsNullEncrypt()
@@ -142,7 +142,7 @@ namespace TestsLab1
             //act
             encrypter.Encrypt(string.Empty, null);
         }
-        
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void TextIsNullDecrypt()
@@ -152,7 +152,7 @@ namespace TestsLab1
             //act
             encrypter.Decrypt(string.Empty, null);
         }
-        
+
         [TestMethod]
         public void KeyShouldBeParsedEncrypt()
         {
@@ -161,20 +161,20 @@ namespace TestsLab1
             var testText = "А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я";
             var expected = "А Ь Ш Ф Р М И Е Б Э Щ Х С Н Й Ё В Ю Ъ Ц Т О К Ж Г Я Ы Ч У П Л З Д";
             //act
-            var actual =encrypter.Encrypt("asdasd21sda ^&*2s3d1KL17d", testText);
+            var actual = encrypter.Encrypt("asdasd21sda ^&*2s3d1KL17d", testText);
             //assert
             Assert.AreEqual(expected, actual);
         }
-        
+
         [TestMethod]
         public void KeyShouldBeParsedDecrypt()
         {
             //init
             var encrypter = new CaesarMethodOfDecimations(_lang);
-            var testText ="А Ь Ш Ф Р М И Е Б Э Щ Х С Н Й Ё В Ю Ъ Ц Т О К Ж Г Я Ы Ч У П Л З Д";
-            var expected ="А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я";
+            var testText = "А Ь Ш Ф Р М И Е Б Э Щ Х С Н Й Ё В Ю Ъ Ц Т О К Ж Г Я Ы Ч У П Л З Д";
+            var expected = "А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я";
             //act
-            var actual =encrypter.Decrypt("asdasd21sda ^&*2s3d1KL17d", testText);
+            var actual = encrypter.Decrypt("asdasd21sda ^&*2s3d1KL17d", testText);
             //assert
             Assert.AreEqual(expected, actual);
         }
@@ -188,11 +188,11 @@ namespace TestsLab1
             var expected = "А А2АА22А А";
             //act
             var actual = encrypter.Encrypt("5", testText);
-            
+
             //assert
             Assert.AreEqual(expected, actual);
         }
-        
+
         [TestMethod]
         public void TestKeyParsingDecrypt()
         {
@@ -202,11 +202,11 @@ namespace TestsLab1
             var expected = "А А2АА22А А";
             //act
             var actual = encrypter.Decrypt("afds5ksjv", testText);
-            
+
             //assert
             Assert.AreEqual(expected, actual);
         }
-        
+
         [TestMethod]
         public void KeyBiggerThenAlphabetEncrypt()
         {
@@ -216,11 +216,11 @@ namespace TestsLab1
             var expected = "А А2АА22А А";
             //act
             var actual = encrypter.Encrypt("34", testText);
-            
+
             //assert
             Assert.AreEqual(expected, actual);
         }
-        
+
         [TestMethod]
         public void KeyBiggerThenAlphabetDecrypt()
         {
@@ -230,11 +230,11 @@ namespace TestsLab1
             var expected = "А А2АА22А А";
             //act
             var actual = encrypter.Decrypt("34", testText);
-            
+
             //assert
             Assert.AreEqual(expected, actual);
         }
-        
+
         [TestMethod]
         public void SimplePhraseEncrypt()
         {
@@ -244,12 +244,12 @@ namespace TestsLab1
             var expected = "НТЛЙШЬ ЯЛТ";
             //act
             var actual = encrypter.Encrypt("5", testText);
-            
+
             //assert
             Assert.AreEqual(expected, actual);
         }
-        
-        
+
+
         [TestMethod]
         public void CorrectTestLetterEncrypt()
         {
@@ -259,11 +259,11 @@ namespace TestsLab1
             var expected = "А";
             //act
             var actual = encrypter.Encrypt("5", testText);
-            
+
             //assert
             Assert.AreEqual(expected, actual);
         }
-        
+
         [TestMethod]
         public void CorrectTestLetterDecrypt()
         {
@@ -273,10 +273,10 @@ namespace TestsLab1
             var expected = "А";
             //act
             var actual = encrypter.Decrypt("5", testText);
-            
+
             //assert
             Assert.AreEqual(expected, actual);
         }
-        
+
     }
 }

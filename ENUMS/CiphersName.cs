@@ -1,6 +1,6 @@
-﻿namespace TheoryOfInformation.lab1.Encryptions.Models.Ciphers
-{
-    public enum Ciphers
+﻿namespace TheoryOfInformation.lab1.ENUMS
+{ 
+    public enum CiphersName
     {
         TextByColumnsCipher,
         WizhnersAlgorithm,

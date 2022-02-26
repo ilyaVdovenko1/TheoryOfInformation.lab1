@@ -1,4 +1,6 @@
-﻿namespace TheoryOfInformation.lab1.Encryptions.Models.Ciphers
+﻿using TheoryOfInformation.lab1.Interfacies;
+
+namespace TheoryOfInformation.lab1.Encryptions.Models.Ciphers
 {
     public class UnknownCipher : ICipher
     {

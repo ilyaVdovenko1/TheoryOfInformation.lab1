@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using TheoryOfInformation.lab1.Structs;
 using System.Linq;
+using TheoryOfInformation.lab1.ENUMS;
 
 namespace TheoryOfInformation.lab1.Encryptions
 {

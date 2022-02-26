@@ -1,11 +1,12 @@
 ﻿using System;
-using TheoryOfInformation.lab1.Structs;
+using TheoryOfInformation.lab1.Interfacies;
+using TheoryOfInformation.lab1.ENUMS;
 
 namespace TheoryOfInformation.lab1.Encryptions.Models.Ciphers
 {
     public class CipherFactory
     {
-        public static ICipher ProduceCipher(Ciphers cipherName, LangIds langIds = LangIds.EN)
+        public static ICipher ProduceCipher(CiphersName cipherName, LangIds langIds = LangIds.EN)
         {
 
             AlphabetInUse lang;
@@ -22,11 +23,11 @@ namespace TheoryOfInformation.lab1.Encryptions.Models.Ciphers
             }
             switch (cipherName)
             {
-                case Ciphers.CaesarMethodOfDecimations:
+                case CiphersName.CaesarMethodOfDecimations:
                     return new CaesarMethodOfDecimations(lang);
-                case Ciphers.TextByColumnsCipher:
+                case CiphersName.TextByColumnsCipher:
                     return new TextByColumns(lang);
-                case Ciphers.WizhnersAlgorithm:
+                case CiphersName.WizhnersAlgorithm:
                     return new WizhnersAlgorithm(lang);
                 default:
                     return new UnknownCipher();

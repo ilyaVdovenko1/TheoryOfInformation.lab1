@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using TheoryOfInformation.lab1.Encryptions;
 using TheoryOfInformation.lab1.Encryptions.Models;
+using TheoryOfInformation.lab1.Interfacies;
 using static TheoryOfInformation.lab1.Encryptions.TextCleaner;
 
 namespace TheoryOfInformation.lab1

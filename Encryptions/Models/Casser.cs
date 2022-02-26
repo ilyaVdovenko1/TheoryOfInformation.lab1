@@ -1,5 +1,6 @@
 ﻿using System;
-using TheoryOfInformation.lab1.Structs;
+using TheoryOfInformation.lab1.ENUMS;
+using TheoryOfInformation.lab1.Interfacies;
 
 namespace TheoryOfInformation.lab1.Encryptions.Models
 {

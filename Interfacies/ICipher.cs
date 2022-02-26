@@ -1,4 +1,4 @@
-﻿namespace TheoryOfInformation.lab1.Encryptions.Models.Ciphers
+﻿namespace TheoryOfInformation.lab1.Interfacies
 {
     public interface ICipher
     {

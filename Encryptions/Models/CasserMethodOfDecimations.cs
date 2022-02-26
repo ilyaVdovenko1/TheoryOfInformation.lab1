@@ -1,20 +1,31 @@
 ﻿using System;
-using TheoryOfInformation.lab1.Structs;
 using TheoryOfInformation.lab1.Encryptions.Models.Ciphers;
+using TheoryOfInformation.lab1.ENUMS;
+using TheoryOfInformation.lab1.Interfacies;
 
 namespace TheoryOfInformation.lab1.Encryptions.Models
 {
     internal class CasserMethodOfDecimations : IEncryption
     {
+        /*ToDo:
+         * 1. Change language in cipher
+         * 2. Group enums in Structs
+         * 3. Refactor ctrs of this class
+         * 4. Check Ui for requirements
+         *
+         *
+         *
+         *
+         */
         public bool HasKey => false;
 
         public LangIds Lang => LangIds.RU;
 
         private readonly ICipher Cipher;
 
-        private CasserMethodOfDecimations()
+        public CasserMethodOfDecimations()
         {
-            Cipher = CipherFactory.ProduceCipher(Ciphers.Ciphers.CaesarMethodOfDecimations, Lang);
+            Cipher = CipherFactory.ProduceCipher(CiphersName.CaesarMethodOfDecimations, Lang);
         }
 
         public string Decrypte(string text, string key)
